@@ -163,6 +163,7 @@
 					};
 					F4CE988A1C8A921300D735C1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = B46PAY3563;
 					};
 				};
 			};
@@ -390,6 +391,7 @@
 		F4CE98991C8A921300D735C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = B46PAY3563;
 				INFOPLIST_FILE = SwiftyMarkdownTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.voyagetravelapps.SwiftyMarkdownTests;
@@ -401,6 +403,7 @@
 		F4CE989A1C8A921300D735C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = B46PAY3563;
 				INFOPLIST_FILE = SwiftyMarkdownTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.voyagetravelapps.SwiftyMarkdownTests;

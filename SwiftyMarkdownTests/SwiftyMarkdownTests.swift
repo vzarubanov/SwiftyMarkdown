@@ -294,4 +294,12 @@ Line break
         
     }
 	
+    func testLists() {
+        
+        let extected = "∙ Body Injury - $100K/$200K or $150K/$250K\n∙ Property Damage - $100K\n∙ Uninsured Motorist - $100K/$200K\n∙ Deductible - $250"
+        let input = "* Body Injury - **$100K/$200K** or **$150K/$250K**\n* Property Damage - **$100K**\n* Uninsured Motorist - **$100K/$200K**\n* Deductible - **$250**"
+        let output = SwiftyMarkdown(string: input).attributedString().string
+        
+        XCTAssertEqual(output, extected)
+    }
 }

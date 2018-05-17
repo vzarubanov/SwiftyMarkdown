@@ -177,10 +177,11 @@ enum LineStyle : Int {
 	open func attributedString() -> NSAttributedString {
 		let attributedString = NSMutableAttributedString(string: "")
 		
-		let lines = self.string.components(separatedBy: CharacterSet.newlines)
+        let lines = self.string.components(separatedBy: CharacterSet.newlines)
 		
 		var lineCount = 0
 		
+        let lists = ["* ": "∙ "]
 		let headings = ["# ", "## ", "### ", "#### ", "##### ", "###### "]
 		
 		var skipLine = false
@@ -207,7 +208,18 @@ enum LineStyle : Int {
 					break
 				}
 			}
-			
+            
+            // process list
+            for list in lists {
+                
+                if line.hasPrefix(list.key) {
+                    line = list.value + line.dropFirst(list.key.count)
+                    
+                    // we've processed list
+                    break
+                }
+            }
+            
 			// Look for underlined headings
 			if lineCount  < lines.count {
 				let nextLine = lines[lineCount]
